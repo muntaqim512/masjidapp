@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice5/pages/page16.dart';
 import 'package:practice5/widgets/RapeatContainer7.dart';
 
 import 'Page8.dart';
@@ -261,21 +262,32 @@ class _page14State extends State<page14> with TickerProviderStateMixin {
                   scrollDirection: Axis.horizontal,
                   children: [
                     RapeatContainer7(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Page16(),
+                          ),
+                        );
+                      },
                       image: "assets/images/p1.png",
                       text: "Abu Baker",
                       text1: "Shatri",
                     ),
                     RapeatContainer7(
+                      onTap: () {},
                       image: "assets/images/p2.png",
                       text: "As-Sudays-",
                       text1: "shraym",
                     ),
                     RapeatContainer7(
+                      onTap: () {},
                       image: "assets/images/p3.png",
                       text: "Mahir-al-",
                       text1: "Muayqali",
                     ),
                     RapeatContainer7(
+                      onTap: () {},
                       image: "assets/images/p1.png",
                       text: "Abu Baker",
                       text1: "Shatri",
@@ -284,12 +296,124 @@ class _page14State extends State<page14> with TickerProviderStateMixin {
                 ),
               ),
               Container(
+                padding: EdgeInsets.all(14),
                 width: double.infinity,
+                height: 520.0,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Text("data"),
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Image.asset(
+                        "assets/images/a1.png",
+                        height: 33,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "Alif-Lãm-Mĩm.1",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(
+                      thickness: 1,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Image.asset(
+                        "assets/images/a2.png",
+                        height: 33,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "This is the Book! There is no doubt about\nit1—a guide for those mindful of Allah",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(
+                      thickness: 1,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Image.asset(
+                        "assets/images/a3.png",
+                        height: 33,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "who believe in the unseen,1 establish prayer,\n& donate from what We have provided for them,",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(
+                      thickness: 1,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Image.asset(
+                        "assets/images/a4.png",
+                        height: 33,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        "and who believe in what has been revealed to\nyou ‘O Prophet’ 1 and what was revealed before\nyou, and have sure faith in the Hereafter.",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

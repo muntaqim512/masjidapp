@@ -4,11 +4,13 @@ class RapeatContainer7 extends StatefulWidget {
   final String image;
   final String text;
   final String text1;
+  final void Function()? onTap;
   const RapeatContainer7({
     Key? key,
     required this.image,
     required this.text,
     required this.text1,
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -24,16 +26,19 @@ class _RapeatContainer7State extends State<RapeatContainer7> {
       ),
       child: Column(
         children: [
-          Container(
-            height: 75,
-            width: 75,
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: ClipRRect(
-              child: Image.asset(
-                widget.image,
+          GestureDetector(
+            onTap: widget.onTap,
+            child: Container(
+              height: 75,
+              width: 75,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: ClipRRect(
+                child: Image.asset(
+                  widget.image,
+                ),
               ),
             ),
           ),

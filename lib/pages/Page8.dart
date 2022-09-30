@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice5/pages/Page9.dart';
+import 'package:practice5/pages/page18.dart';
 import 'package:practice5/widgets/RapeatConatiner3.dart';
 import 'package:practice5/widgets/RapeatContainer.dart';
 
@@ -61,7 +62,14 @@ class _Page8State extends State<Page8> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         RapeatConatiner1(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Page18(),
+                              ),
+                            );
+                          },
                           text: "Masjid",
                           image: "assets/images/c.png",
                         ),
