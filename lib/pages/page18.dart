@@ -114,142 +114,147 @@ class _Page18State extends State<Page18> {
               topLeft: Radius.circular(20),
             ),
           ),
-          child: Column(
+          child: ListView(
+            scrollDirection: Axis.vertical,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Column(
                 children: [
-                  Container(
-                    height: 35,
-                    width: 250,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(30),
-                        bottomRight: Radius.circular(30),
-                      ),
-                      color: Colors.white,
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 125,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(30),
-                              bottomRight: Radius.circular(30),
-                            ),
-                            color: Color(0xFF0B1A2E),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 35,
+                        width: 250,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30),
                           ),
-                          child: Center(
-                            child: Text(
-                              "Catagories",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 125,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(30),
+                                  bottomRight: Radius.circular(30),
+                                ),
+                                color: Color(0xFF0B1A2E),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Catagories",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
                               ),
                             ),
+                            SizedBox(
+                              width: 40,
+                            ),
+                            Center(
+                              child: Text(
+                                "My Duas",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        RapeatContainer8(
+                          text: "Search Here...",
+                          icon: Icon(
+                            Icons.search,
                           ),
                         ),
                         SizedBox(
-                          width: 40,
+                          height: 15,
                         ),
-                        Center(
-                          child: Text(
-                            "My Duas",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w700,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RapeatConatiner1(
+                              text: "All Duas",
+                              image: "assets/images/s1.png",
+                              onTap: () {},
                             ),
-                          ),
+                            RapeatConatiner1(
+                              text: "Daily Routine",
+                              image: "assets/images/s2.png",
+                              onTap: () {},
+                            ),
+                            RapeatConatiner1(
+                              text: "Food&Drink",
+                              image: "assets/images/s3.png",
+                              onTap: () {},
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RapeatConatiner1(
+                              text: "Distress",
+                              image: "assets/images/s4.png",
+                              onTap: () {},
+                            ),
+                            RapeatConatiner1(
+                              text: "Prayer",
+                              image: "assets/images/c.png",
+                              onTap: () {},
+                            ),
+                            RapeatConatiner1(
+                              text: "Sleep",
+                              image: "assets/images/s5.png",
+                              onTap: () {},
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RapeatConatiner1(
+                              text: "Tollet",
+                              image: "assets/images/s6.png",
+                              onTap: () {},
+                            ),
+                            RapeatConatiner1(
+                              text: "Dua in Joy",
+                              image: "assets/images/s7.png",
+                              onTap: () {},
+                            ),
+                            RapeatConatiner1(
+                              text: "Travel",
+                              image: "assets/images/s8.png",
+                              onTap: () {},
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ),
                 ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  children: [
-                    RapeatContainer8(
-                      text: "Search Here...",
-                      icon: Icon(
-                        Icons.search,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        RapeatConatiner1(
-                          text: "All Duas",
-                          image: "assets/images/s1.png",
-                          onTap: () {},
-                        ),
-                        RapeatConatiner1(
-                          text: "Daily Routine",
-                          image: "assets/images/s2.png",
-                          onTap: () {},
-                        ),
-                        RapeatConatiner1(
-                          text: "Food&Drink",
-                          image: "assets/images/s3.png",
-                          onTap: () {},
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        RapeatConatiner1(
-                          text: "Distress",
-                          image: "assets/images/s4.png",
-                          onTap: () {},
-                        ),
-                        RapeatConatiner1(
-                          text: "Prayer",
-                          image: "assets/images/c.png",
-                          onTap: () {},
-                        ),
-                        RapeatConatiner1(
-                          text: "Sleep",
-                          image: "assets/images/s5.png",
-                          onTap: () {},
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        RapeatConatiner1(
-                          text: "Tollet",
-                          image: "assets/images/s6.png",
-                          onTap: () {},
-                        ),
-                        RapeatConatiner1(
-                          text: "Dua in Joy",
-                          image: "assets/images/s7.png",
-                          onTap: () {},
-                        ),
-                        RapeatConatiner1(
-                          text: "Travel",
-                          image: "assets/images/s8.png",
-                          onTap: () {},
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
               ),
             ],
           ),
