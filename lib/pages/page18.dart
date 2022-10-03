@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:practice5/pages/page19.dart';
+import 'package:practice5/pages/page21.dart';
+import 'package:practice5/pages/page23.dart';
+import 'package:practice5/pages/page27.dart';
 import 'package:practice5/widgets/RapeatContainer.dart';
 import 'package:practice5/widgets/RapeatContainer8.dart';
 
@@ -46,7 +50,7 @@ class _Page18State extends State<Page18> {
             ),
           ),
           title: Text(
-            "Dues/Dhikr",
+            "Create Shop Lestning",
             style: TextStyle(
               color: Colors.black,
               fontSize: 29,
@@ -189,19 +193,33 @@ class _Page18State extends State<Page18> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             RapeatConatiner1(
-                              text: "All Duas",
+                              text: "Dua",
                               image: "assets/images/s1.png",
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Page19(),
+                                  ),
+                                );
+                              },
                             ),
                             RapeatConatiner1(
-                              text: "Daily Routine",
+                              text: "Tasbeeh",
                               image: "assets/images/s2.png",
                               onTap: () {},
                             ),
                             RapeatConatiner1(
-                              text: "Food&Drink",
+                              text: "Description",
                               image: "assets/images/s3.png",
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Page21(),
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -212,19 +230,33 @@ class _Page18State extends State<Page18> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             RapeatConatiner1(
-                              text: "Distress",
+                              text: "Calender",
                               image: "assets/images/s4.png",
                               onTap: () {},
                             ),
                             RapeatConatiner1(
-                              text: "Prayer",
+                              text: "Allah name",
                               image: "assets/images/c.png",
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Page23(),
+                                  ),
+                                );
+                              },
                             ),
                             RapeatConatiner1(
-                              text: "Sleep",
+                              text: "Create Shop",
                               image: "assets/images/s5.png",
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Page27(),
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),

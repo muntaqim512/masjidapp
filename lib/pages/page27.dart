@@ -6,14 +6,14 @@ import 'package:practice5/widgets/row3.dart';
 import 'Page8.dart';
 import 'page7.dart';
 
-class Page16 extends StatefulWidget {
-  const Page16({Key? key}) : super(key: key);
+class Page27 extends StatefulWidget {
+  const Page27({Key? key}) : super(key: key);
 
   @override
-  State<Page16> createState() => _Page16State();
+  State<Page27> createState() => _Page27State();
 }
 
-class _Page16State extends State<Page16> {
+class _Page27State extends State<Page27> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -131,7 +131,7 @@ class _Page16State extends State<Page16> {
             child: Column(
               children: [
                 RapeatContainer8(
-                  text: "Masjid",
+                  text: "Business Name",
                   icon: Icon(null),
                 ),
                 SizedBox(
@@ -147,7 +147,16 @@ class _Page16State extends State<Page16> {
                   height: 10,
                 ),
                 RapeatContainer8(
-                  text: "Contact No",
+                  text: "Business Catagories",
+                  icon: Icon(
+                    Icons.keyboard_arrow_down,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                RapeatContainer8(
+                  text: "Grant Ownership",
                   icon: Icon(null),
                 ),
                 SizedBox(
@@ -169,7 +178,7 @@ class _Page16State extends State<Page16> {
                   child: TextFormField(
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Masjid picture",
+                        hintText: "Shop picture",
                         suffixIcon: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             primary: Color(0xFFC8AE6C),
@@ -194,72 +203,60 @@ class _Page16State extends State<Page16> {
                   height: 10,
                 ),
                 RapeatContainer8(
-                  text: "Namz Timing",
+                  text: "Contact No",
                   icon: Icon(null),
                 ),
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  height: 150,
-                  padding: EdgeInsets.only(
-                    left: 18,
-                  ),
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Color.fromARGB(255, 114, 113, 113),
-                    ),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: TextFormField(
-                    maxLines: 5,
-                    keyboardType: TextInputType.multiline,
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Request Masjid Ownership",
-                      hintStyle: TextStyle(
-                        fontWeight: FontWeight.w700,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFFC8AE6C),
+                        elevation: 0.0,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Color.fromARGB(255, 114, 113, 113),
+                          ),
+                          borderRadius: BorderRadius.circular(
+                            30,
+                          ),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        "Save",
                       ),
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row3(
-                  text: "Masjid",
-                  text1: "Varified",
-                  text2: "Non-Varified",
-                  onPressed: () {},
-                  onPressed1: () {},
-                ),
-                Divider(
-                  color: Colors.black,
-                  // thickness: 2,
-                ),
-                Row3(
-                  text: "wuzu Area",
-                  text1: "Availabe",
-                  text2: "Non-Available",
-                  onPressed: () {},
-                  onPressed1: () {},
-                ),
-                Divider(
-                  color: Colors.black,
-                  // thickness: 2,
-                ),
-                Row3(
-                  text: "Parking",
-                  text1: "Available",
-                  text2: "Non-Available",
-                  onPressed: () {},
-                  onPressed1: () {},
-                ),
-                Divider(
-                  color: Colors.black,
-                  // thickness: 2,
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFF0B1A2E),
+                        elevation: 0.0,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Color.fromARGB(255, 114, 113, 113),
+                          ),
+                          borderRadius: BorderRadius.circular(
+                            30,
+                          ),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        "Availabe more listening(+)",
+                      ),
+                    ),
+                  ],
                 ),
                 Align(
                   alignment: Alignment.topRight,
@@ -282,7 +279,32 @@ class _Page16State extends State<Page16> {
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
                       ),
-                      "Availabe more listening(+)",
+                      "Availabe more Products(+)",
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xFF0B1A2E),
+                      elevation: 0.0,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          color: Color.fromARGB(255, 114, 113, 113),
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          30,
+                        ),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      "Barcode Scan",
                     ),
                   ),
                 ),

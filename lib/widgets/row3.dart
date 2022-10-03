@@ -20,6 +20,7 @@ class Row3 extends StatefulWidget {
 }
 
 class _Row3State extends State<Row3> {
+  bool isButtonPressed = false;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -36,7 +37,7 @@ class _Row3State extends State<Row3> {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFFC8AE6C),
+                primary: isButtonPressed ? Color(0xFFC8AE6C) : Colors.white,
                 elevation: 0.0,
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
@@ -47,7 +48,11 @@ class _Row3State extends State<Row3> {
                   ),
                 ),
               ),
-              onPressed: widget.onPressed,
+              onPressed: () {
+                setState(() {
+                  isButtonPressed = !isButtonPressed;
+                });
+              },
               child: Text(
                 style: TextStyle(
                   color: Colors.black,
@@ -64,7 +69,7 @@ class _Row3State extends State<Row3> {
                 side: BorderSide(
                   color: Color.fromARGB(255, 114, 113, 113),
                 ),
-                primary: Colors.white,
+                primary: isButtonPressed ? Colors.white : Color(0xFFC8AE6C),
                 elevation: 0.0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(
@@ -72,7 +77,11 @@ class _Row3State extends State<Row3> {
                   ),
                 ),
               ),
-              onPressed: widget.onPressed1,
+              onPressed: () {
+                setState(() {
+                  isButtonPressed = !isButtonPressed;
+                });
+              },
               child: Text(
                 widget.text2,
                 style: TextStyle(
