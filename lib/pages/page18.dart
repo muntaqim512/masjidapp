@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practice5/pages/page19.dart';
 import 'package:practice5/pages/page21.dart';
 import 'package:practice5/pages/page23.dart';
+
 import 'package:practice5/pages/page27.dart';
 import 'package:practice5/widgets/RapeatContainer.dart';
 import 'package:practice5/widgets/RapeatContainer8.dart';
@@ -277,7 +278,7 @@ class _Page18State extends State<Page18> {
                               onTap: () {},
                             ),
                             RapeatConatiner1(
-                              text: "Travel",
+                              text: "Majid u",
                               image: "assets/images/s8.png",
                               onTap: () {},
                             ),

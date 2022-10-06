@@ -4,6 +4,8 @@ import 'package:practice5/pages/page18.dart';
 import 'package:practice5/widgets/RapeatConatiner3.dart';
 import 'package:practice5/widgets/RapeatContainer.dart';
 
+import 'page26.dart';
+
 class Page8 extends StatefulWidget {
   const Page8({Key? key}) : super(key: key);
 
@@ -62,19 +64,19 @@ class _Page8State extends State<Page8> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         RapeatConatiner1(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Page18(),
-                              ),
-                            );
-                          },
+                          onTap: () {},
                           text: "Masjid",
                           image: "assets/images/c.png",
                         ),
                         RapeatConatiner1(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Page26(),
+                              ),
+                            );
+                          },
                           text: "Shop",
                           image: "assets/images/p.png",
                         ),

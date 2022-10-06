@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:practice5/pages/page25.dart';
+import 'package:practice5/pages/page26.dart';
 
 import '../widgets/RapeatConatiner2.dart';
 import '../widgets/RapeatContainer.dart';
 import 'Page8.dart';
 import 'page14.dart';
+import 'page18.dart';
 
 class Page7 extends StatefulWidget {
   const Page7({Key? key}) : super(key: key);
@@ -13,13 +18,16 @@ class Page7 extends StatefulWidget {
 }
 
 class _Page7State extends State<Page7> {
+  var getResult = "QrScan";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            QrScan();
+          },
           backgroundColor: Color(0xFFFEFEFE),
           elevation: 0.0,
           shape: RoundedRectangleBorder(
@@ -106,9 +114,16 @@ class _Page7State extends State<Page7> {
                     image: "assets/images/869636.png",
                   ),
                   RapeatConatiner1(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Page18(),
+                        ),
+                      );
+                    },
                     text: "Masjid",
-                    image: "assets/images/\Layer 5.png",
+                    image: "assets/images/Layer 5.png",
                   ),
                   RapeatConatiner1(
                     onTap: () {},
@@ -167,10 +182,37 @@ class _Page7State extends State<Page7> {
                     "Scanned in New York City, New York, United\nState of America",
                 image: "assets/images/Layer 25.png",
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                getResult,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void QrScan() async {
+    try {
+      final qrcode = await FlutterBarcodeScanner.scanBarcode(
+          '#ff6666', 'cancel', true, ScanMode.QR);
+      if (!mounted) return;
+      setState(() {
+        getResult = qrcode;
+      });
+      print("QRCode_Result:--");
+      print(qrcode);
+    } on PlatformException {
+      setState(() {
+        getResult = "Failled to scan Qr Code";
+      });
+    }
   }
 }

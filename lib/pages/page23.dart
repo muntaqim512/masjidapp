@@ -197,7 +197,7 @@ class _Page23State extends State<Page23> {
                 height: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   RapeactConatiner9(),
                   RapeactConatiner9(),
